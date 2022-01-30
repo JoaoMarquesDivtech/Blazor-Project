@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Organize.Migrations
+namespace Lib.Data.Migrations
 {
     public partial class CriaçãodeDB : Migration
     {
