@@ -10,5 +10,6 @@ namespace Lib.Data.Entities
         public string Login { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public DateTime DataDoAniversario { get; set; } = DateTime.MinValue;
     }
 }

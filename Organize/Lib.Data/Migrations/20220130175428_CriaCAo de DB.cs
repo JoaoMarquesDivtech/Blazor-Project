@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Lib.Data.Migrations
 {
-    public partial class CriaçãodeDB : Migration
+    public partial class CriaCAodeDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +16,7 @@ namespace Lib.Data.Migrations
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataDoAniversario = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Referencia = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
