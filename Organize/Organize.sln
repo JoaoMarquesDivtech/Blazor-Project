@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize", "Organize\Organize.csproj", "{D1EF5600-649E-408E-AA70-1E54520DD974}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D062E761-8C17-47F1-959A-11676CDC6E9E} = {D062E761-8C17-47F1-959A-11676CDC6E9E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Dto", "Lib.Dto\Lib.Dto.csproj", "{D062E761-8C17-47F1-959A-11676CDC6E9E}"
 EndProject
