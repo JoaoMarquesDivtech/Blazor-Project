@@ -21,6 +21,7 @@ namespace Organize
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseConfiguration(new ConfigurationBuilder().AddJsonFile("connectionstring.json", optional: false, reloadOnChange: true).AddCommandLine(args).Build());
                 });
     }
 }
