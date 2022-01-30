@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Lib.Data.Entities
+namespace Lib.Dto
 {
-    public class Usuario :BaseDal
+    class UsuarioDto
     {
         public string Login { get; set; }
         public string Email { get; set; }

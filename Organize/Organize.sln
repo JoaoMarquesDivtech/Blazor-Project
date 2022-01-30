@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize", "Organize\Organi
 		{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5} = {3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Dto", "Lib.Dto\Lib.Dto.csproj", "{D062E761-8C17-47F1-959A-11676CDC6E9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Dto", "Lib.Dto\Lib.Dto.csproj", "{D062E761-8C17-47F1-959A-11676CDC6E9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Data", "Lib.Data\Lib.Data.csproj", "{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Data", "Lib.Data\Lib.Data.csproj", "{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Services", "Lib.Services\Lib.Services.csproj", "{49599D2E-5233-4B4C-9502-F8FBB56F4D95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Services", "Lib.Services\Lib.Services.csproj", "{49599D2E-5233-4B4C-9502-F8FBB56F4D95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Tools", "Lib.Tools\Lib.Tools.csproj", "{834182FA-F2B9-4B15-B845-FED12C523C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Tools", "Lib.Tools\Lib.Tools.csproj", "{834182FA-F2B9-4B15-B845-FED12C523C72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
