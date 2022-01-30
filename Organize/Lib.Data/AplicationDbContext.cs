@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Organize.Data.Entities;
+using Lib.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Organize.Data
+namespace Lib.Data
 {
     public class AplicationDbContext : DbContext
     {
