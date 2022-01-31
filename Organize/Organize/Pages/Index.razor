@@ -6,40 +6,41 @@
 
 
 
-  <div class="box"
+<div class="box">
 
-<div class="row">
-    <div class="col-10">
-        <input type="text" @bind="novatarefa.Nome" class="form-control" />
+    <div class="row mt-2">
+        <div class="col-8">
+            <input type="text" @bind="novatarefa.Nome" placeholder="Digite o nome da sua tarefa" class="form-control" />
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary form-control" @onclick="AdicionarTarefa">Adicionar</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger form-control" @onclick="LimparTarefa">Limpar</button>
+        </div>
     </div>
-    <div class="col-2">
-        <button class="btn btn-primary form-control" @onclick="AdicionarTarefa">Adicionar</button>
-    </div>
-</div>
-    
-<table class="table">
-    <thead>
+
+    <table class="table table-bordered mt-2">
+
         <tr>
             <th>Ativo</th>
-            <th>Nome</th>
+            <th style="width:800px">Nome</th>
             <th>Açoes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            @{
-                foreach (var tarefa in Tarefas)
-                {
-                    <td><input type="checkbox" @bind="tarefa.Feito"  @onclick="e=> FeitoTarefa(tarefa)" class="form-control" /></td>
+        </tr>        @{
+            foreach (var tarefa in Tarefas)
+            {
+                <tr>
+
+
+                    <td><input type="checkbox" id="sucess" @bind="tarefa.Feito" @onclick="e=> FeitoTarefa(tarefa)" class="form-control"/></td>
                     <td>@tarefa.Nome</td>
                     <td><button class="btn btn-danger" @onclick="e => ExcluirTarefa(tarefa.Id)">X</button></td>
-                }
+                </tr>
             }
-        </tr>
-    </tbody>
-</table>
-    </div>
-    
+        }
+    </table>
+</div>
+
 
 
 @code{
@@ -56,6 +57,12 @@
     public void ExcluirTarefa(int id)
     {
         Services.Tarefa().Excluir(id);
+        Tarefas = Services.Tarefa().ConsultarTodos();
+    }
+
+    public void LimparTarefa()
+    {
+        Services.Tarefa().Limpar();
         Tarefas = Services.Tarefa().ConsultarTodos();
     }
 

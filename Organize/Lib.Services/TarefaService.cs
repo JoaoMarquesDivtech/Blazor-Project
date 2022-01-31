@@ -31,13 +31,13 @@ namespace Lib.Services
         {
             var task = aplicationDbContext.Tarefas.Where(tb => tb.Id == id).FirstOrDefault();
 
-            if(task!=null)
+            if (task != null)
                 return task;
 
             return new Tarefa();
         }
 
-        public void  Adicionar(Tarefa tarefa)
+        public void Adicionar(Tarefa tarefa)
         {
             tarefa.Id = 0;
             aplicationDbContext.Tarefas.Add(tarefa);
@@ -46,7 +46,7 @@ namespace Lib.Services
 
         public void Feito(Tarefa tarefa)
         {
-            var tarefaDal = aplicationDbContext.Tarefas.Where(t=> t.Id == tarefa.Id).FirstOrDefault();
+            var tarefaDal = aplicationDbContext.Tarefas.Where(t => t.Id == tarefa.Id).FirstOrDefault();
             tarefaDal.Feito = !tarefaDal.Feito;
             aplicationDbContext.SaveChanges();
         }
@@ -57,10 +57,18 @@ namespace Lib.Services
         {
             var tarefa = Consultar(id);
 
-            if (tarefa != null) {
+            if (tarefa != null)
+            {
                 aplicationDbContext.Tarefas.Remove(tarefa);
                 aplicationDbContext.SaveChanges();
             }
+        }
+
+        public void Limpar()
+        {
+            var lista = aplicationDbContext.Tarefas;
+            aplicationDbContext.Tarefas.RemoveRange(lista);
+            aplicationDbContext.SaveChanges();
         }
     }
 }
