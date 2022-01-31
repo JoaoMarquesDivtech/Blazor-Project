@@ -10,7 +10,7 @@ namespace Lib.Services
     {
 
 
-        public static TarefaService Usuario()
+        public static TarefaService Tarefa()
         {
             return new TarefaService();
         }

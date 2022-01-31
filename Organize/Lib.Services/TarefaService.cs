@@ -20,11 +20,11 @@ namespace Lib.Services
 
         public List<Tarefa> ConsultarTodos()
         {
-            var tasks = aplicationDbContext.Tarefas.ToList();
-            if (tasks == null)
+            var tarefas = aplicationDbContext.Tarefas.ToList();
+            if (tarefas == null)
                 return new List<Tarefa>();
 
-            return tasks;
+            return tarefas;
         }
 
         public Data.Entities.Tarefa Consultar(int id)
@@ -37,19 +37,28 @@ namespace Lib.Services
             return new Tarefa();
         }
 
-        public void  Adicionar(Tarefa usuario)
+        public void  Adicionar(Tarefa tarefa)
         {
-            usuario.Id = 0;
-            aplicationDbContext.Tarefas.Add(usuario);
+            tarefa.Id = 0;
+            aplicationDbContext.Tarefas.Add(tarefa);
             aplicationDbContext.SaveChanges();
         }
 
+        public void Feito(Tarefa tarefa)
+        {
+            var tarefaDal = aplicationDbContext.Tarefas.Where(t=> t.Id == tarefa.Id).FirstOrDefault();
+            tarefaDal.Feito = !tarefaDal.Feito;
+            aplicationDbContext.SaveChanges();
+        }
+
+
+
         public void Excluir(int id)
         {
-            var usuario = Consultar(id);
+            var tarefa = Consultar(id);
 
-            if (usuario != null) {
-                aplicationDbContext.Tarefas.Remove(usuario);
+            if (tarefa != null) {
+                aplicationDbContext.Tarefas.Remove(tarefa);
                 aplicationDbContext.SaveChanges();
             }
         }
