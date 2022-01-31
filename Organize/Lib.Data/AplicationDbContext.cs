@@ -28,7 +28,7 @@ namespace Lib.Data
             base.OnConfiguring(dbContextOptionsBuilder);
 
         }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Entities.Tarefa> Tarefas { get; set; }
 
 
 

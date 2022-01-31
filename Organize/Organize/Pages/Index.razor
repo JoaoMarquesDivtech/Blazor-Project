@@ -2,32 +2,30 @@
 @using Lib.Data
 @using Lib.Services
 @using Lib.Data.Entities
-<h1>Hello, world!</h1>
-<button type="button" @onclick="criarUsuario"></button>
 
 
-@{
-    if (usuario != null)
-        foreach (var usuario in usuarios)
-        {
-            <h1>@usuario.Login</h1>
-            <h2>@usuario.Id</h2>
-        }
-}
+
+
+<input type="text" class="form-control"/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tarefa</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tarefa</td>
+            <td><button type="button" class="btn btn-danger">Excluir</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
 
 
 @code{
-    Usuario usuario = new Usuario { Login = "Teste", Senha = "Teste", Email = "jdkajdka", CPF = "djksadjka", DataDeCriacao = DateTime.MinValue, DataDoAniversario = DateTime.MinValue, Referencia = "9382913" };
-    List<Usuario> usuarios = Services.Usuario().ConsultarTodos();
 
-    public void criarUsuario()
-    {
-        Services.Usuario().Adicionar(usuario);
-        consultarUsuario();
-    }
-    public void consultarUsuario()
-    {
-        usuarios = Services.Usuario().ConsultarTodos();
-    }
 
 }

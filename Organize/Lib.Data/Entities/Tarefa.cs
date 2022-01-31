@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Lib.Data.Entities
 {
-    public class Usuario :BaseDal
+    public class Tarefa :BaseDal
     {
         public string Login { get; set; }
         public string Email { get; set; }

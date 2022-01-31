@@ -8,39 +8,39 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lib.Services
 {
-    public class UsuarioService
+    public class TarefaService
     {
 
         private AplicationDbContext aplicationDbContext;
 
-        public UsuarioService()
+        public TarefaService()
         {
             aplicationDbContext = new AplicationDbContext();
         }
 
-        public List<Usuario> ConsultarTodos()
+        public List<Tarefa> ConsultarTodos()
         {
-            var usuarios = aplicationDbContext.Usuarios.ToList();
-            if (usuarios == null)
-                return new List<Usuario>();
+            var tasks = aplicationDbContext.Tarefas.ToList();
+            if (tasks == null)
+                return new List<Tarefa>();
 
-            return usuarios;
+            return tasks;
         }
 
-        public Usuario Consultar(int id)
+        public Data.Entities.Tarefa Consultar(int id)
         {
-            var usuario = aplicationDbContext.Usuarios.Where(tb => tb.Id == id).FirstOrDefault();
+            var task = aplicationDbContext.Tarefas.Where(tb => tb.Id == id).FirstOrDefault();
 
-            if(usuario!=null)
-                return usuario;
+            if(task!=null)
+                return task;
 
-            return new Usuario();
+            return new Tarefa();
         }
 
-        public void  Adicionar(Usuario usuario)
+        public void  Adicionar(Tarefa usuario)
         {
             usuario.Id = 0;
-            aplicationDbContext.Usuarios.Add(usuario);
+            aplicationDbContext.Tarefas.Add(usuario);
             aplicationDbContext.SaveChanges();
         }
 
@@ -49,7 +49,7 @@ namespace Lib.Services
             var usuario = Consultar(id);
 
             if (usuario != null) {
-                aplicationDbContext.Usuarios.Remove(usuario);
+                aplicationDbContext.Tarefas.Remove(usuario);
                 aplicationDbContext.SaveChanges();
             }
         }
