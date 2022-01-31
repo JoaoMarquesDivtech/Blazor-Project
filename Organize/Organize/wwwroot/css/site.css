@@ -2,16 +2,32 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: url(pexels-suzy-hazelwood-1226398.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url(pexels-suzy-hazelwood-1226398.jpg);
+    background-size: cover;
+}
+
 }
 
 a, .btn-link {
-    color: #0366d6;
+    color: #1861ac;
 }
 
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+   
 }
 
 .content {
@@ -48,3 +64,14 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.box {
+    width: 1000px;
+    height: 200px;
+    background: #fff;
+    border-width: medium;
+    border-style: solid;
+    border-color: #F00;
+}
+
+

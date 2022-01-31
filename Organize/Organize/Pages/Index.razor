@@ -1,19 +1,22 @@
 ﻿@page "/"
+@page "/index"
 @using Lib.Data
 @using Lib.Services
 @using Lib.Data.Entities
 
 
 
+  <div class="box"
+
 <div class="row">
     <div class="col-10">
         <input type="text" @bind="novatarefa.Nome" class="form-control" />
     </div>
     <div class="col-2">
-        <button class="btn btn-primary form-control" @onclick="AdicionarTarefa">Salvar</button>
+        <button class="btn btn-primary form-control" @onclick="AdicionarTarefa">Adicionar</button>
     </div>
 </div>
-
+    
 <table class="table">
     <thead>
         <tr>
@@ -35,8 +38,8 @@
         </tr>
     </tbody>
 </table>
-
-
+    </div>
+    
 
 
 @code{
