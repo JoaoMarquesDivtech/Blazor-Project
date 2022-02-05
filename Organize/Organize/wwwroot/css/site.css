@@ -2,31 +2,22 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: url(pexels-suzy-hazelwood-1226398.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url(pexels-suzy-hazelwood-1226398.jpg);
+    background-size: cover;
 }
 
-
-#nav {
-    background-color: #3F3D3D;
 }
-
-#Usuario{
-    margin-left:44%;
-}
-
-
-i{
-    color:white;
-}
-
-nav span {
-    text-align: right !important;
-    align-items: end !important;
-    align-content: end !important;
-}
-
-nav div{
-    color:white}
 
 a, .btn-link {
     color: #1861ac;
@@ -74,6 +65,24 @@ a, .btn-link {
         top: 0.5rem;
     }
 
+.box {
+    padding: 10px;
+    width: 1000px;
+    background: #fff;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #F00;
+    border-radius: 5px 5px;   
+    
+}
 
+
+input[type="checkbox"] {
+    background-color: forestgreen !important;
+}
+
+input:checked {
+    background-color: forestgreen !important;
+}
 
 
