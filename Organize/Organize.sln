@@ -3,13 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize", "Organize\Organize.csproj", "{D1EF5600-649E-408E-AA70-1E54520DD974}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorProject", "Organize\BlazorProject.csproj", "{D1EF5600-649E-408E-AA70-1E54520DD974}"
 	ProjectSection(ProjectDependencies) = postProject
-		{D062E761-8C17-47F1-959A-11676CDC6E9E} = {D062E761-8C17-47F1-959A-11676CDC6E9E}
 		{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5} = {3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Dto", "Lib.Dto\Lib.Dto.csproj", "{D062E761-8C17-47F1-959A-11676CDC6E9E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib.Data", "Lib.Data\Lib.Data.csproj", "{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}"
 EndProject
@@ -27,10 +24,6 @@ Global
 		{D1EF5600-649E-408E-AA70-1E54520DD974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1EF5600-649E-408E-AA70-1E54520DD974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1EF5600-649E-408E-AA70-1E54520DD974}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D062E761-8C17-47F1-959A-11676CDC6E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D062E761-8C17-47F1-959A-11676CDC6E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D062E761-8C17-47F1-959A-11676CDC6E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D062E761-8C17-47F1-959A-11676CDC6E9E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B4E4CDE-AE10-48CC-AEE3-B4CD4431E8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
